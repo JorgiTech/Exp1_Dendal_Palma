@@ -64,7 +64,10 @@ body {
 
 .box8 {
    float: right;
+<<<<<<< HEAD
    
+=======
+>>>>>>> 715e76d16bf2341f775faeaa34faa6414df480c5
 
 }
 
@@ -96,6 +99,7 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: aliceblue;
 
+<<<<<<< HEAD
 }
 
 .btn-group{
@@ -114,3 +118,6 @@ padding-top: 1vh;
     --bs-dropdown-color:  #000;
 
   }
+=======
+}
+>>>>>>> 715e76d16bf2341f775faeaa34faa6414df480c5
