@@ -203,3 +203,9 @@ footer {
   --bs-nav-link-color: white;
 
 }
+
+.carousel-inner{
+
+  background-color: #242424;
+
+}
