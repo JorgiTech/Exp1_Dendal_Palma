@@ -197,3 +197,9 @@ footer {
   background-color: #000;
   border-color: #000;
 }
+
+.nav-item{
+
+  --bs-nav-link-color: white;
+
+}
