@@ -67,11 +67,19 @@ footer {
 }
 
 #map{
+  
   height: 900px;
   width: 100%;
   
   }
 
+.link{
+color: white;
+float: right;
+padding-right: 50px;
+text-decoration: underline;
+} 
+  
 /*TEXTO*/
 
 p {
