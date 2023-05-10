@@ -66,6 +66,12 @@ footer {
   float: right;
 }
 
+#map{
+  height: 900px;
+  width: 100%;
+  
+  }
+
 /*TEXTO*/
 
 p {
