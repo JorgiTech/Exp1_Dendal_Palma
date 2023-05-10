@@ -171,6 +171,13 @@ h5 {
   background-color: #242424;
 }
 
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: black;
+}
 
 /*IMAGES*/
 
