@@ -179,6 +179,41 @@ textarea {
   color: black;
 }
 
+form{
+  background: #2e2b2b;
+  padding: 40px 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.form{
+  width: 100%;
+  margin: auto;
+}
+
+form{
+  position: relative;
+  margin: 45px ;
+}
+
+input{
+  background: #878383;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+}
+
+select{
+  background: #878383;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: chartreuse;
+    padding-top: 20px;
+}
 /*IMAGES*/
 
 .IMG1 {
