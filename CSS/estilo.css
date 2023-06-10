@@ -1,267 +1,80 @@
-/*GENERAL*/
-
+/* TODO */
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: aliceblue;
-  text-align: justify;
 }
-
-body {
+body{
   background-color: #242424;
-  padding: 0px;
-  margin: 0px;
 }
-
-.box {
-  text-align: left;
-  height: 20%;
-  margin: 0px;
-  background-color: rgb(122, 138, 138);
-}
-
-.box3 {
-  padding: 12px;
-  padding-top: 50px;
-  height: 20%;
-  margin: 0px;
-}
-
-.box4 {
-  padding-left: 1%;
-  padding-top: 1%;
-  text-align: left;
-  background-color: burlywood;
-  height: 160px;
-  margin: 5px;
-  padding-right: 1%;
-}
-
-.box5 {
-  padding-left: 1%;
-  padding-top: 1%;
-  text-align: left;
-  background-color: goldenrod;
-  height: 200px;
-  margin: 5px;
-  padding-right: 1%;
-}
-
-.box6 {
-  padding-left: 1%;
-  background-color: peru;
-  height: 800px;
-  margin: 5px;
-  padding-right: 1%;
-}
-
-.box8 {
-  float: right;
-}
-
-footer {
-  float: s right;
-}
-
-.fr {
-  float: right;
-}
-
-#map{
-  
-  height: 850px;
+/* CABECERA */
+header{
   width: 100%;
+  color: aliceblue;
   
-  }
-
-.link{
-color: white;
-float: right;
-padding-right: 50px;
-text-decoration: underline;
-} 
-  
-/*TEXTO*/
-
-p {
-  font-family: Calibri;
-  text-decoration: solid;
 }
 
-h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin: 0px;
-  padding: 50px;
+.menu{
+  list-style-type: none;
   text-align: center;
-  background-color: #242424;
 }
 
-h2 {
-  margin: 0px;
-  padding: 0px;
-  font-family: calibri;
+.menu-item{
+  text-decoration: none;
+  padding: 7px;
 }
 
-h5 {
-  text-decoration-color: aliceblue;
-}
-
-.cr {
-  margin-right: 25px;
+.registro{
   float: right;
 }
 
-/*BOOTSTRAP ITEMS*/
-
-.card-title {
-  margin-bottom: var(--bs-card-title-spacer-y);
-  color: white;
+.logo{
+height: 80px;
+width: 80px;
 }
 
-.card-img-top {
-  width: 635px;
-  height: 500px;
-}
-
-.card-body {
-  width: 635px;
-  height: 300px;
-  background-color: #000;
-}
-
-.btn-group {
-  padding-left: 1vh;
-  padding-top: 1vh;
-}
-
-.aaaaa {
-  --bs-btn-bg: #000;
-}
-
-.dropdown-menu {
-  --bs-dropdown-bg: WHITE;
-}
-
+/*SECCION*/
+/* CARRUSEL */
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
   justify-content: center;
-}
+  height: 700px;
 
-.col-lg-6,
-.col-xs-12 {
-  background-color: #242424;
 }
+.imagen-carrusel{
 
-.btn-check:checked+.btn,
-.btn.active,
-.btn.show,
-.btn:first-child:active,
-:not(.btn-check)+.btn:active {
-  color: var(--bs-btn-active-color);
-  background-color: #000;
-  border-color: #000;
-}
-
-.nav-item {
-  --bs-nav-link-color: white;
-}
-
-.carousel-inner {
-  background-color: #242424;
-}
-
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: black;
-}
-
-form{
-  background: #2e2b2b;
-  padding: 40px 0;
-  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-}
-
-.form{
-  width: 100%;
-  margin: auto;
-}
-
-form{
-  position: relative;
-  margin: 45px ;
-}
-
-input{
-  background: #878383;
-  color: #c6c6c6;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-}
-
-select{
-  background: #878383;
-}
-
-.warnings{
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    color: chartreuse;
-    padding-top: 20px;
-}
-/*IMAGES*/
-
-.IMG1 {
-  height: 80PX;
-  width: 80PX;
-}
-
-.a {
-  height: 500px;
   width: 1200px;
 }
 
-.b {
-  width: 700px;
-  height: 450px;
+/* PARRAFOS-HOME*/
+
+.bienvenida{
+  padding: 30px;
+  margin: 7px;
+  text-align: justify;
+ font-size: 25px; 
 }
 
-.c {
-  width: 700px;
-  height: 450px;
+.parrafo-bievenida{
+  height: 530px;
+  
+  
 }
 
-.d {
-  width: 100%;
-  height: 500px;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+.parrafo-bievenida2{
+  height: 530px;
+  
 }
 
-.e {
-  width: 635px;
-  height: 500px;
+/* IMAGENES-HOME*/
+.home-img{
+  width: 52%;
+  height: 530px;
+  vertical-align: top;
+  float: right;
+  margin-left: 80px;
+  border: 5px solid black;
+  border-radius: 5px;
 }
 
-.e {
-  width: 935px;
-  height: 550px;
-}
-
-.h {
-  width: 35px;
-  height: 550px;
-}
-
-.icon {
-  height: 25px;
-  width: 25px;
-  float: left;
-  padding-left: 5px;
-}
