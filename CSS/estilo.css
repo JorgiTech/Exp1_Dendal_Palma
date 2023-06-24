@@ -173,7 +173,9 @@ footer {
 
 }
 
-
+a {
+  text-decoration: none;
+}
 
 .formulario fieldset {
   border: 2px solid darkred;
