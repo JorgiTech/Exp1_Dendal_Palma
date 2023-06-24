@@ -1,68 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
-    <title>NOSOTROS</title>
-    <link rel="stylesheet" href="CSS/estilo.css">
+
+    <link rel="stylesheet" href="CSS\estilo.css">
+
 </head>
 
 <body>
 
-    <ul class="nav">
+    <header>
 
-        <li class="nav-item">
-            <a class="nav-link" href="HOME.HTML">HOME</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="NOSOTROS.HTML">NOSOTROS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="GALERIA.HTML">GALERIA</a>
-        </li>
-        <li class="nav-item">
-    <a class="nav-link" href="MAP.HTML">UBICACION <span class="badge bg-secondary">NUEVO</span></a>
-  </li>
-    </ul>
-    <a class="link" href="FORMULARIO.HTML">REGISTRO</a>
-    <div>
+        <ul class="menu">
+            <h1>
+                <img class="logo" src="IMG-1\AUTOTECH-LOGO.png">
+                AUTO<span class="name">TECH</span>
+            </h1>
 
-        <H1>
+            <li>
+                <a class="menu-item" href="HOME.HTML">HOME</a>
+                <a class="menu-item" href="NOSOTROS.HTML">NOSOTROS</a>
+                <a class="menu-item" href="GALERIA.HTML">GALERIA</a>
+                <a class="menu-item" href="MAP.HTML">MAP</a>
+            </li>
+            <a class="registro" href="FORMULARIO.HTML">REGISTRO</a>
+        </ul>
 
-            <img class="IMG1" src="IMG-1/AUTOTECH-LOGO.png" alt="" srcset="">
-            AUTOTECH
-        </H1>
-
-    </div>
-
-    <div class="box4">
-
-        <h2>Misión: En AUTOTECH, nuestra misión es proporcionar un servicio de reparación y mantenimiento de vehículos
+    </header>
+    <section class="info">
+        <h2 class="mision">Misión: En AUTOTECH, nuestra misión es proporcionar un servicio de reparación y mantenimiento
+            de vehículos
             excepcional y confiable para nuestros clientes. Nos esforzamos por brindar una experiencia de atención al
             cliente de primera clase y un servicio de alta calidad utilizando tecnología avanzada y técnicas
             innovadoras.</h2>
 
-    </div>
+        <br>
 
-    <div class="box5">
-
-        <h2>Visión: Nuestra visión en AUTOTECH es convertirnos en el taller mecánico líder en el mercado, reconocido por
+        <h2 class="vision">Visión: Nuestra visión en AUTOTECH es convertirnos en el taller mecánico líder en el mercado,
+            reconocido por
             la calidad de nuestros servicios, la experiencia de nuestros técnicos y la satisfacción de nuestros
             clientes. Buscamos ser un referente en el sector automotriz, ofreciendo soluciones integrales y
             personalizadas para el cuidado y mantenimiento de los vehículos, brindando siempre un servicio amable y de
             confianza.</h2>
 
-    </div>
-
-    <div class="box6">
-
-        <h2> 
-            Además queremos: <br>
+        <h2 class="extra">
+            <span class="titulo-extra">Además queremos:</span> <br>
 
             <br> 1-Mejorar continuamente la calidad de nuestros servicios para satisfacer las necesidades de nuestros
             clientes y superar sus expectativas.<br>
@@ -87,29 +77,21 @@
             de piezas de alta calidad y una red de apoyo confiable.<br>
         </h2>
 
-    </div>
-    </div>
+    </section>
 
-    <div>
+    <footer>
+        <p>NO OLVIDES SEGUIRNOS EN NUESTRAS REDES SOCIALES!!!</p>
 
-        <footer>
+        <a href="https://es-la.facebook.com/">
+            <img class="icon" src="ICONS\FB.jpg">
+        </a>
 
-            <p>NO OLVIDES SEGUIRNOS EN NUESTRAS REDES SOCIALES!!!</p>
+        <a href="https://www.instagram.com/">
+            <img class="icon" src="ICONS\IG.jpg">
+        </a>
 
-            <a href="https://www.instagram.com/" target="_blank">
-                <img class="icon" src="ICONS/IG.jpg" alt="">
-            </a>
-
-            <a href="https://es-la.facebook.com/" target="_blank">
-                <img class="icon" src="ICONS/FB.jpg" alt="">
-            </a>
-
-            <DIV>
-                <p class="cr">@copyright Derechos reservados.</p>
-            </DIV>
-
-        </footer>
-    </div>
+        <p>@copyright Derechos reservados.</p>
+    </footer>
 
 </body>
 
