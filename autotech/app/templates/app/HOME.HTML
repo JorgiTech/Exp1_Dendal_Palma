@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
+    {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="{% static 'app/CSS/estilo.css' %}">
 
 </head>
 
@@ -21,7 +22,7 @@
 
         <ul class="menu">
             <h1>
-                <img class="logo" src="IMG-1\AUTOTECH-LOGO.png">
+                <img class="logo" src="{% static 'app/IMG-1\AUTOTECH-LOGO.png' %}">
                 
                 AUTO<span class="name">TECH</span>
             </h1>
@@ -30,7 +31,7 @@
                 <a class="menu-item" href="HOME.HTML">HOME</a>
                 <a class="menu-item" href="NOSOTROS.HTML">NOSOTROS</a>
                 <a class="menu-item" href="GALERIA.HTML">GALERIA</a>
-                <a class="menu-item" href="MAP.HTML">MAP</a>
+                <a class="menu-item" href="API.HTML">MAP</a>
             </li>
             <a class="registro" href="FORMULARIO.HTML">REGISTRO</a>
         </ul>
@@ -48,16 +49,16 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="imagen-carrusel" src="IMG-1\CARROUSEL1.jpg" class="d-block " alt="...">
+                    <img class="imagen-carrusel" src="{% static 'app/IMG-1\CARROUSEL1.jpg' %}" class="d-block " alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="imagen-carrusel" src="IMG-1/CARROUSEL2.jpg" class="d-block" alt="...">
+                    <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL2.jpg' %}" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="imagen-carrusel" src="IMG-1/CARROUSEL3.jpg" class="d-block " alt="...">
+                    <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL3.jpg' %}" class="d-block " alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="imagen-carrusel" src="IMG-1/CARROUSEL4.jpg" class="d-block" alt="...">
+                    <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL4.jpg' %}" class="d-block" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
@@ -73,7 +74,7 @@
 
         <div class="bienvenida">
             <p class="parrafo-bievenida">
-                <img class="home-img" src="IMG-1/HOME1.jpg">
+                <img class="home-img" src="{% static 'app/IMG-1/HOME1.jpg' %}">
                 Bienvenidos a AUTOTECH, el taller mecánico especializado en brindar un servicio de calidad a todos
                 nuestros clientes. Nuestro objetivo es proporcionar soluciones eficientes y económicas para cualquier
                 problema que tenga su vehículo. Contamos con un equipo altamente capacitado de técnicos y mecánicos que
@@ -89,7 +90,7 @@
             </p>
 
             <P class="parrafo-bievenida">
-                <img class="home-img" src="IMG-1/HOME2.jpg">
+                <img class="home-img" src="{% static 'app/IMG-1/HOME2.jpg' %}">
                 En AUTOTECH, nos enfocamos en brindar una atención al cliente excepcional. Desde el momento en que
                 ingresa a nuestro taller, será recibido por uno de nuestros profesionales, quienes lo guiarán en todo
                 momento y responderán a cualquier pregunta o duda que tenga. Realizaremos una evaluación completa de su
@@ -120,11 +121,11 @@
         <p>NO OLVIDES SEGUIRNOS EN NUESTRAS REDES SOCIALES!!!</p>
 
         <a href="https://es-la.facebook.com/">
-            <img class="icon" src="ICONS\FB.jpg">
+            <img class="icon" src="{% static 'app/ICONS\FB.jpg' %}">
         </a>
 
         <a href="https://www.instagram.com/">
-            <img class="icon" src="ICONS\IG.jpg">
+            <img class="icon" src="{% static 'app/ICONS\IG.jpg' %}">
         </a>
 
         <p>@copyright Derechos reservados.</p>

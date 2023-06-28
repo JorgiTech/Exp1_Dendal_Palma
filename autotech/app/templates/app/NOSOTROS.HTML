@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
+    {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="CSS\estilo.css">
+    <link rel="stylesheet" href="{% static 'app/CSS\estilo.css' %}">
 
 </head>
 
@@ -21,7 +22,7 @@
 
         <ul class="menu">
             <h1>
-                <img class="logo" src="IMG-1\AUTOTECH-LOGO.png">
+                <img class="logo" src="{% static 'app/IMG-1\AUTOTECH-LOGO.png' %}">
                 AUTO<span class="name">TECH</span>
             </h1>
 
@@ -29,7 +30,7 @@
                 <a class="menu-item" href="HOME.HTML">HOME</a>
                 <a class="menu-item" href="NOSOTROS.HTML">NOSOTROS</a>
                 <a class="menu-item" href="GALERIA.HTML">GALERIA</a>
-                <a class="menu-item" href="MAP.HTML">MAP</a>
+                <a class="menu-item" href="API.HTML">MAP</a>
             </li>
             <a class="registro" href="FORMULARIO.HTML">REGISTRO</a>
         </ul>
@@ -83,11 +84,11 @@
         <p>NO OLVIDES SEGUIRNOS EN NUESTRAS REDES SOCIALES!!!</p>
 
         <a href="https://es-la.facebook.com/">
-            <img class="icon" src="ICONS\FB.jpg">
+            <img class="icon" src="{% static 'app/ICONS\FB.jpg' %}">
         </a>
 
         <a href="https://www.instagram.com/">
-            <img class="icon" src="ICONS\IG.jpg">
+            <img class="icon" src="{% static 'app/ICONS\IG.jpg' %}">
         </a>
 
         <p>@copyright Derechos reservados.</p>
