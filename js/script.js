@@ -1,84 +1,112 @@
-function iniciarMap() {
-    var coord = { lat: -33.539009,lng: -70.7728858 };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: coord
-
-    }); 
-    var marker = new google.maps.Marker({   
-        position: coord,
-        map: map
-
-    });
+function consumir_api(url) {
+	return fetch(url)
+		.then(function (response) {
+			// Verificar si la solicitud fue exitosa (código de estado 200)
+			if (response.ok) {
+				return response.json();
+			} else {
+				throw new Error("Error en la solicitud. Código de estado: " + response.status);
+			}
+		})
+		.catch(function (error) {
+			throw new Error("Error de conexión: " + error);
+		});
 }
 
-//var form = document.getElementById('form');
-//    form.addEventListener('submit', function(event){
-//        event.preventDefault();
-//        var mensajeError = [];
-//
-//        if(nombres.value.length <6 || null || nombres.value === '' ){
-//            mensajeError.push('El nombre no es valido <br>');
-//        }
-//       if(apellido_paterno.value.length <6 || null || apellido_paterno.value === '' ){
-//            mensajeError.push('El apellido paterno no es valido <br>');
-//        }
-//        if(apellido_materno.value.length <6 || null || apellido_materno.value === '' ){
-//            mensajeError.push('El apellido materno no es valido <br>');
-//        }
-//        if(rut.value.length <6 || null || rut.value === '' ){
-//            mensajeError.push('El rut no es valido <br>');
-//        }
-//        if(direccion.value.length <6 || null || direccion.value === '' ){
-//            mensajeError.push('La dirección no es valida <br>');
-//        }
-//        if(correo_electronico.value.length <6 || null || correo_electronico.value === '' ){
-//            mensajeError.push('El correo electrónico no es valido <br>');
-//        }
-//        if(telefono.value.length <6 || null || telefono.value === '' ){
-//            mensajeError.push('El telefono no es valido <br>');
-//        }
-//
-//    error.innerHTML = mensajeError.join(' ');
-//
-//    return false;
-//});
+function mostrarFotos() {
+	var url = "https://jsonplaceholder.typicode.com/photos";
+	consumir_api(url)
+		.then(function (data) {
+			var photoContainer = document.getElementById("photo-container");
+
+			// Crear una tarjeta para cada foto
+			data.forEach(function (photo) {
+				var photoCard = document.createElement("div");
+				photoCard.classList.add("photo-card");
+
+				var photoTitle = document.createElement("h3");
+				photoTitle.classList.add("photo-title");
+				photoTitle.innerText = photo.title;
+
+				var photoImage = document.createElement("img");
+				photoImage.classList.add("photo-image");
+				photoImage.src = photo.url;
+				photoImage.alt = photo.title;
+
+				photoCard.appendChild(photoTitle);
+				photoCard.appendChild(photoImage);
+				photoContainer.appendChild(photoCard);
+			});
+		})
+		.catch(function (error) {
+			console.log("Error en la llamada a la API:", error);
+		});
+}
+
+// Llamar a la función para mostrar las fotos al cargar la página
+mostrarFotos();
+
+/**
+ 
+function consumir_api(url) {
+	return fetch(url)
+		.then(function(response) {
+			// Verificar si la solicitud fue exitosa (código de estado 200)
+			if (response.ok) {
+				return response.json();
+			} else {
+				throw new Error("Error en la solicitud. Código de estado: " + response.status);
+			}
+		})
+		.catch(function(error) {
+			throw new Error("Error de conexión: " + error);
+		});
+}
+
+function llamarAPI() {
+	var url = "https://jsonplaceholder.typicode.com/photos";
+	consumir_api(url)
+		.then(function(data) {
+			// Procesar los datos de respuesta
+			// ...
+			document.getElementById("resultado").innerText = "Respuesta de la API: " + JSON.stringify(data);
+		})
+		.catch(function(error) {
+			console.log("Error en la llamada a la API:", error);
+		});
+}
+
+ *
+ /
+
+/*
+const API_URL = "http://jsonplaceholder.typicode.com";
+ 
+const xhr = new XMLHttpRequest();
+
+function onRequestHandler() {
+
+	if (this.readyState == 4 && this.status == 200) {
+		//0=unset
+		//1=opened
+		//2=headers received
+		//3=loading
+		//4=done
+		const data = JSON.parse(this.response);
+		//console.log(data);
+		const HTMLResponse = document.querySelector("#app");
+
+		const array = data.map((user) => `<li>${user.name} ${user.email} </li>`);
+		HTMLResponse.innerHTML = `<ul>${array}</ul>`;
+	}
+}
+
+xhr.addEventListener("load", onRequestHandler);
+xhr.open("GET", `${API_URL}/users`);
+xhr.send();
+
+*/
 
 
 
-const nombre = document.getElementById("nombres")
-const apellidoP = document.getElementById("apellido_paterno")
-const apellidoM = document.getElementById("apellido_materno")
-const rut = document.getElementById("rut")
-const dir = document.getElementById("direccion")
-const email = document.getElementById("correo_electronico")
-const tel = document.getElementById("telefono")
-const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
 
-form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let entrar = false
-    let regexemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
-    if(nombre.value.length <6){
-        alert("El Nombre no es valido.")
-    }
-    if(apellidoP.value.length <6){
-        alert("El Apellido Paterno no es valido.")
-    }
-    if(apellidoM.value.length <6){
-        alert("El Apellido Materno no es valido.")
-    }
-    if(rut.value.length <10){
-        alert("El rut no es valido.")
-    }
-    if(dir.value.length <6){
-        alert("La Dirección no es valida.")
-    }
-    if(!regexemail.test(email.value)) {
-        alert("El Correo Electronico no es valido.")
-    }
-    if(tel.value.length <6){
-        alert("El Teléfono no es valido.")
-    }
-})

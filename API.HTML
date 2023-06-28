@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="CSS\estilo.css">
+    <script src="js\script.js"></script>
 
 </head>
 
@@ -22,6 +23,7 @@
         <ul class="menu">
             <h1>
                 <img class="logo" src="IMG-1\AUTOTECH-LOGO.png">
+
                 AUTO<span class="name">TECH</span>
             </h1>
 
@@ -29,14 +31,54 @@
                 <a class="menu-item" href="HOME.HTML">HOME</a>
                 <a class="menu-item" href="NOSOTROS.HTML">NOSOTROS</a>
                 <a class="menu-item" href="GALERIA.HTML">GALERIA</a>
-                <a class="menu-item" href="MAP.HTML">MAP</a>
+                <a class="menu-item" href="API.HTML">API</a>
             </li>
             <a class="registro" href="FORMULARIO.HTML">REGISTRO</a>
         </ul>
 
     </header>
-    <section class="info">
-        
+    <section>
+
+        <!--
+<DIV class="app"></DIV>
+<script src="js\script.js" type="module"></script>
+ 
+ <button onclick="llamarAPI()">Llamar a la API</button>
+        <div id="resultado"></div>
+        -->
+
+
+        <title>Fotos de la API</title>
+        <style>
+            .photo-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .photo-card {
+                width: 200px;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+
+            .photo-title {
+                font-weight: bold;
+            }
+
+            .photo-image {
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+            }
+        </style>
+
+        </head>
+
+        <body>
+            <div id="photo-container" class="photo-container"></div>
+        </body>
+       
     </section>
 
     <footer>
