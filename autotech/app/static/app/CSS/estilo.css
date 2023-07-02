@@ -1,0 +1,230 @@
+/* TODO */
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
+body {
+  background-color: #242424;
+}
+
+/* CABECERA */
+header {
+  width: 100%;
+  color: aliceblue;
+  background-color: darkred;
+}
+
+.menu {
+  list-style-type: none;
+  text-align: center;
+
+}
+
+.menu-item {
+  text-decoration: none;
+  padding: 7px;
+  color: #45a29e;
+  ;
+}
+
+.registro {
+  float: right;
+  color: darkgoldenrod;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+}
+
+h1 {
+  color: #c5c6c7;
+
+}
+
+.name {
+  color: #62bdb8;
+  ;
+}
+
+/*SECCION*/
+/* CARRUSEL */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+
+}
+
+.imagen-carrusel {
+
+  width: 1200px;
+}
+
+/* PARRAFOS-HOME*/
+
+.bienvenida {
+  padding: 30px;
+  margin: 7px;
+  text-align: justify;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.parrafo-bievenida {
+  height: 530px;
+  overflow: hidden;
+
+}
+
+.parrafo-bievenida2 {
+  height: 530px;
+  overflow: hidden;
+}
+
+/* IMAGENES-HOME*/
+.home-img {
+  width: 52%;
+  height: 530px;
+  vertical-align: top;
+  float: right;
+  margin-left: 80px;
+  border: 5px solid darkred;
+  border-radius: 5px;
+
+}
+
+.card-img-top {
+  width: 35rem;
+  height: 500px;
+}
+
+.card-body {
+  background-color: black;
+  height: 420px;
+  width: 35rem;
+
+}
+
+.card {
+  border: 0px;
+
+}
+
+.card-title {
+  color: aquamarine;
+}
+
+.card-text {
+  height: 320px;
+  text-align: justify;
+}
+
+.precio {
+
+  color: rgb(42, 187, 42);
+}
+
+.info {
+  margin: 50px;
+  margin-left: 220px;
+  margin-right: 220px;
+  text-align: justify;
+}
+
+.mision {
+  margin-bottom: 50px;
+  color: #66fcf1;
+}
+
+.vision {
+  margin-bottom: 150px;
+  color: #66fcf1;
+}
+
+.extra {
+  margin-right: 360px;
+  text-align: left;
+  color: #51dfd8;
+}
+
+.titulo-extra {
+  text-decoration: underline;
+  color: #c5c6c7;
+
+}
+
+/* FOOTER */
+
+footer {
+  padding: 18px;
+  background-color: darkred;
+  text-align: center;
+
+}
+
+.icon {
+
+  width: 80px;
+  height: 80px;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.formulario fieldset {
+  border: 2px solid darkred;
+  padding: 70px;
+}
+
+.formulario legend {
+  text-align: center;
+  padding: 1rem;;
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.campo {
+  width: 500px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem;
+}
+
+
+  .campo label {
+      flex-basis: 15rem;
+  }
+
+
+.campo input {
+  padding: .5rem;
+  flex: 1;
+}
+
+input[type="submit"] {
+  all: unset;
+  box-sizing: inherit;
+  padding: .5rem;
+  margin: 2rem 0 2rem 0; 
+  display: block;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 900;
+  transition: background-color .3s;
+}
+
+input[type="submit"]:hover {
+  background-color: darkred;
+  cursor: pointer;
+}

@@ -1,7 +1,18 @@
 from django.shortcuts import render
-from .import views
+
 
 # Create your views here.
 def index(request):
-    context={}
-    return render(request,'autotech/index.html',context)
+    return render(request,'app/index.html')
+
+def nosotros(request):
+    return render(request,'app/nosotros.html')
+
+def galeria(request):
+    return render(request,'app/galetia.html')
+
+def api(request):
+    return render(request,'app/api.html')
+
+def formulario(request):
+    return render(request,'app/formulario.html')

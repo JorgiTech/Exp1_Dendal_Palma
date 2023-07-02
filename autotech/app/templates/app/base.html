@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'app/CSS/estilo.css' %}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <ul class="menu">
+            <h1>
+                <img class="logo" src="{% static 'app/IMG-1/AUTOTECH-LOGO.png' %}">
+                
+
+                AUTO<span class="name">TECH</span>
+            </h1>
+
+            <li>
+                <a class="menu-item" href="{% url 'index' %}">HOME</a>
+                <a class="menu-item" href="{% url 'nosotros' %}">NOSOTROS</a>
+                <a class="menu-item" href="{% url 'galeria' %}">GALERIA</a>
+                <a class="menu-item" href="{% url 'api' %}">API</a>
+            </li>
+            <a class="registro" href="{% url 'formulario' %}">REGISTRO</a>
+        </ul>
+
+    </header>
+
+    {% block contenido %}
+    {% endblock %}
+
+    <footer>
+        <p>NO OLVIDES SEGUIRNOS EN NUESTRAS REDES SOCIALES!!!</p>
+
+        <a href="https://es-la.facebook.com/">
+            <img class="icon" src="{% static 'app/ICONS/FB.jpg' %}">
+        </a>
+
+        <a href="https://www.instagram.com/">
+            <img class="icon" src="{% static 'app/ICONS/IG.jpg' %}">
+        </a>
+
+        <p>@copyright Derechos reservados.</p>
+
+    </footer>
+
+</body>
+
+</html>
