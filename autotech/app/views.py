@@ -9,7 +9,7 @@ def nosotros(request):
     return render(request,'app/nosotros.html')
 
 def galeria(request):
-    return render(request,'app/galetia.html')
+    return render(request,'app/galeria.html')
 
 def api(request):
     return render(request,'app/api.html')
