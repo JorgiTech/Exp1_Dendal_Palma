@@ -3,9 +3,9 @@ from .views import index,nosotros,galeria,api,formulario
 
 
 urlpatterns = [
-    path('', index,name='index'),
-    path('', nosotros,name='nosotros'),
-    path('', galeria,name='galeria'),
-    path('', api,name='api'),
-    path('', formulario,name='formulario')
+    path('index/', index,name='index'),
+    path('nosotros/', nosotros,name='nosotros'),
+    path('galeria/', galeria,name='galeria'),
+    path('api/', api,name='api'),
+    path('formulario/', formulario,name='formulario')
 ]
