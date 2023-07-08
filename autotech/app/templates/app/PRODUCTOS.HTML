@@ -1,0 +1,46 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+    <div class="container">
+        <h1>Productos</h1>
+        <table id="customers" border="1">
+            <thead>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Valor</th>
+                <th colspan="2" id="mid">Action</th>
+            </thead>
+            {% for x in pro %}
+            <tr>
+                <td>{{x.id}}</td>
+                <td>{{x.nombre}}</td>
+                <td>{{x.valor}}</td>
+                
+                <td>
+                    <a href=""><button id="add">Agregar</button></a>
+                </td>
+                <td>
+                    <!--
+<a href=""><button id="del">Eliminar</button></a>
+                    -->
+                
+                    <a href=""><button id="del">Eliminar</button></a>
+                </td>
+               
+                {% endfor %}
+            </tr>
+           
+
+            </tr>
+        </table>
+        <br><br>
+        <a href=""><button id="add">Agregar Producto</button></a>
+        
+        
+    </div>
+
+
+
+{% endblock %}

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Producto
 
 
 # Create your views here.
@@ -16,3 +17,7 @@ def api(request):
 
 def formulario(request):
     return render(request,'app/formulario.html')
+
+def productos(request):
+    pro=Producto.objects.all()
+    return render(request,'app/productos.html',{'pro':pro})
