@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block contenido %}
-
+<link rel="stylesheet" href="{% static 'style.css' %}">
 <div class="container">
-    <h1>Pro</h1>
+    <h1>Productos</h1>
     <table id="customers" border="1">
         <thead>
             <th>Id</th>
@@ -19,14 +19,19 @@
             <td>{{x.valor}}</td>
 
             <td>
-                <a href=""><button id="add">Agregar</button></a>
+                
+                <a href="{% url 'actualizar'  %}">Actualizar</a>
+
+
+
+
             </td>
             <td>
                 <!--
 <a href=""><button id="del">Eliminar</button></a>
                 -->
 
-                <a href=""><button id="del">Eliminar</button></a>
+                <a href="eliminar/{{x.id}}"><button id="del">Eliminar</button></a>
             </td>
 
             {% endfor %}
@@ -35,7 +40,7 @@
         </tr>
     </table>
     <br><br>
-    <a href=""><button id="add">Agregar Producto</button></a>
+    <a href="{% url 'agregar' %}"><button id="add">Agregar Producto</button></a>
 
 </div>
 
