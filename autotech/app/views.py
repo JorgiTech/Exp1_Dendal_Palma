@@ -1,4 +1,5 @@
-from django.shortcuts import redirect,render
+
+from django.shortcuts import redirect,render,get_object_or_404
 from .models import Producto
 
 
@@ -45,18 +46,22 @@ def eliminar(request, id):
     pro.delete()
     return redirect("/productos/")
 
+def actualizar(request, id):
+    pro = Producto.objects.get(id=id)
+    return render(request, 'app/actualizar.html', {'pro': pro})
 
-def actualizar(request,id):
-    pro=Producto.objects.get(id=id)
-    return render(request, 'actualizar.html',{'pro':pro})
 
-def actualizarsave(request,id):
-    x=request.POST['id']
-    y=request.POST['nombre']
-    z=request.POST['valor']
+#def actualizar(request,id):
     pro=Producto.objects.get(id=id)
-    pro.id=x
-    pro.nombre=y
-    pro.valor=z
-    pro.save()
-    return redirect("/productos/")
+    return render(request,'app/actualizar.html',{'pro':pro})
+    
+    
+def actualizarsave(request, id):
+    if request.method == 'POST':
+        pro = get_object_or_404(Producto, id=id)
+        pro.nombre = request.POST['nombre']
+        pro.valor = request.POST['valor']
+        pro.save()
+        return redirect("/productos/")
+    else:
+        return redirect("/productos/")

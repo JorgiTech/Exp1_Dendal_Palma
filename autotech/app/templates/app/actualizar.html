@@ -4,18 +4,20 @@
 {% block contenido %}
 
 <link rel="stylesheet" href="{% static 'style.css' %}">
-    <div class="container2">
-        <h1>Actualizar Producto</h1>
-        <form action="{% url 'actualizarsave' %}">
-            <label for="">id</label><br><br>
-            <input type="text" name="id" value=""><br><br>
-            <label for="">Nombre</label><br><br>
-            <input type="text" name="nombre" value=""><br><br>
-            <label for="">Valor</label><br><br>
-            <input type="number" name="valor" value=""><br><br>
-            <button type="submit" id="new1">Actualizar</button>
-        </form>
+<div class="container2">
+    <h1>Actualizar Producto</h1>
+    <form method="POST" action="{% url 'actualizarsave' id=pro.id %}">
+    
+        {% csrf_token %}
+        <label for="id">ID</label><br><br>
+        <input type="text" name="id" value="{{ pro.id }}" readonly><br><br>
+        <label for="nombre">Nombre</label><br><br>
+        <input type="text" name="nombre" value="{{ pro.nombre }}"><br><br>
+        <label for="valor">Valor</label><br><br>
+        <input type="number" name="valor" value="{{ pro.valor }}"><br><br>
+        <button type="submit" id="new1">Actualizar</button>
+    </form>
 
-    </div>
+</div>
 
 {% endblock %}
