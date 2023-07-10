@@ -17,14 +17,8 @@
             <td>{{ producto.id }}</td>
             <td>{{ producto.nombre }}</td>
             <td>{{ producto.valor }}</td>
-
             <td>
-           
                 <a href="{% url 'actualizar' id=producto.id %}"><button id="update">Actualizar Producto</button></a>
-               <!--
-
-<a href="{% url 'actualizar' producto.id %}"><button id="update">Actualizar Producto</button></a>
-               --> 
             </td>
             <td>
                 <a href="eliminar/{{ producto.id }}"><button id="del">Eliminar</button></a>

@@ -14,13 +14,6 @@ urlpatterns = [
     path('agregar/', views.agregar, name='agregar'),
     path('agregarsave', views.agregarsave, name='agregarsave'),
     path('productos/eliminar/<int:id>/', views.eliminar, name='eliminar'),
- #  path('eliminar/<int:id>/', views.eliminar, name='eliminar'),
-  path('actualizar/<int:id>/', views.actualizar, name='actualizar'),
-  #  path('actualizar/<int:id>/', views.actualizar, name='actualizar'),
-    
+    path('actualizar/<int:id>/', views.actualizar, name='actualizar'),
     path('actualizarsave/<int:id>/', views.actualizarsave, name='actualizarsave')
-    
-
-
-
-]
+    ]
