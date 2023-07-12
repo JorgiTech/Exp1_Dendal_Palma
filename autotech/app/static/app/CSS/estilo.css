@@ -228,3 +228,112 @@ input[type="submit"]:hover {
   background-color: darkred;
   cursor: pointer;
 }
+
+/* productos */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table#customers {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table#customers th,
+table#customers td {
+  padding: 8px;
+  text-align: left;
+}
+
+table#customers th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table#customers tr:hover {
+  background-color: #ddd;
+}
+
+#mid {
+  text-align: center;
+}
+
+#add,
+#update,
+#del {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#add:hover,
+#update:hover,
+#del:hover {
+  background-color: #45a049;
+}
+
+/* AGREGAR */
+
+
+.container1 {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.container1 h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container1 label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container1 input[type="text"],
+.container1 input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container1 button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container1 button:hover {
+  background-color: #45a049;
+}
