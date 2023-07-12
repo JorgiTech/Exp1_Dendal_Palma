@@ -1,9 +1,23 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
 <h1>Carrito de Compras</h1>
 
 {% for item_carrito in items_carrito %}
     <p>{{ item_carrito.producto.nombre }} - Cantidad: {{ item_carrito.cantidad }}</p>
     <!-- Mostrar otros detalles del item del carrito -->
-    <a href="{% url 'eliminar_del_carrito' item_carrito.id %}">Eliminar</a>
+    <a href="{% url 'delete' item_carrito.id %}">Eliminar</a>
 {% empty %}
     <p>No hay productos en el carrito.</p>
 {% endfor %}
+
+<!-- Agregar formulario para agregar elementos al carrito -->
+<form method="post" action="{% url 'add' producto_id=producto.id %}">
+    {% csrf_token %}
+    <input type="submit" value="Agregar al carrito">
+</form>
+
+
+{% endblock %}

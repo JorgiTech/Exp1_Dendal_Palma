@@ -66,22 +66,22 @@ def actualizarsave(request, id):
     else:
         return redirect("/productos/")
     
-def agregar_al_carrito(request, producto_id):
+def add(request, producto_id):
     producto = Producto.objects.get(id=producto_id)
     carrito = request.session.get('carrito', {})
     carrito[producto_id] = carrito.get(producto_id, 0) + 1
-    request.session['/carrito/'] = carrito
-    return redirect('/carrito/')
+    request.session['carrito'] = carrito
+    return redirect('carrito')
 
-def eliminar_del_carrito(request, producto_id):
+def delete(request, producto_id):
     carrito = request.session.get('carrito', {})
     if producto_id in carrito:
         del carrito[producto_id]
         request.session['/carrito/'] = carrito
-    return redirect('/carrito/')
+    return redirect('carrito')
 
 def carrito(request):
-    carrito = request.session.get('carrito', {})
+    carrito = request.session.get('/carrito/', {})
     items_carrito = []
     for producto_id, cantidad in carrito.items():
         producto = Producto.objects.get(id=producto_id)
