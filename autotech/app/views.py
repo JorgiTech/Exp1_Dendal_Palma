@@ -1,6 +1,6 @@
 
 from django.shortcuts import redirect,render,get_object_or_404
-from .models import Producto
+from .models import Producto, ItemCarrito
 
 
 # Create your views here.
@@ -65,3 +65,25 @@ def actualizarsave(request, id):
         return redirect("/productos/")
     else:
         return redirect("/productos/")
+    
+def agregar_al_carrito(request, producto_id):
+    producto = Producto.objects.get(id=producto_id)
+    carrito = request.session.get('carrito', {})
+    carrito[producto_id] = carrito.get(producto_id, 0) + 1
+    request.session['/carrito/'] = carrito
+    return redirect('/carrito/')
+
+def eliminar_del_carrito(request, producto_id):
+    carrito = request.session.get('carrito', {})
+    if producto_id in carrito:
+        del carrito[producto_id]
+        request.session['/carrito/'] = carrito
+    return redirect('/carrito/')
+
+def carrito(request):
+    carrito = request.session.get('carrito', {})
+    items_carrito = []
+    for producto_id, cantidad in carrito.items():
+        producto = Producto.objects.get(id=producto_id)
+        items_carrito.append({'producto': producto, 'cantidad': cantidad})
+    return render(request, 'app/carrito.html', {'items_carrito': items_carrito})
