@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<section class="info">
+	<h2>FORMULARIO</h2>
+
+	<form class="formulario">
+		<fieldset>
+			<legend>Tus Datos</legend>
+
+			<div class="campo">
+				<label for="nombre">Nombre: </label>
+				<input id="nombre" type="text" placeholder="Tu Nombre">
+			</div>
+
+			<div class="campo">
+				<label for="paterno">Paterno: </label>
+				<input id="paterno" type="text" placeholder="Tu Apellido Paterno">
+			</div>
+
+			<div class="campo">
+				<label for="materno">Materno: </label>
+				<input id="materno" type="text" placeholder="Tu Apellido Materno">
+			</div>
+
+			<div class="campo">
+				<label for="email">E-mail: </label>
+				<input id="email" type="email" placeholder="Tu Email">
+			</div>
+
+			<div class="campo">
+				<label for="tel">Teléfono: </label>
+				<input id="tel" type="tel" placeholder="Tu Teléfono">
+			</div>
+
+			<div class="campo">
+				<label for="password1">Contraseña: </label>
+				<input id="password1" type="password" placeholder="">
+			</div>
+
+			<div class="campo">
+				<label for="password2">Repita Contraseña: </label>
+				<input id="password2" type="password" placeholder="">
+			</div>
+		</fieldset>
+
+		<input type="submit" value="Registrarme">
+	</form>
+
+</section>
+
+{% endblock %}

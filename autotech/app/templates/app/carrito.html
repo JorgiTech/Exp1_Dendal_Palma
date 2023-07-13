@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<div >
+    <div class="carrito-bot">
+        <div ><h1 class="display-1">TIENDA</h1></div>
+    </div>
+    <div class="row">
+        <div class="">
+            <div class="row" style="padding: 10px 0;">
+                <div class="col-12">
+                    <div class="row">
+                        {% for producto in productos %}
+                        <div class="col-6">
+                            <div class="card2">
+                                <div class="card-body2">
+                                    <h5 class="card-title">{{producto.nombre}}</h5>
+                                    <p class="card-text2">${{producto.valor}}</p>
+                                    <a href="{% url 'add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div >
+            {% include "app/tienda.html" %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<section>
+
+    <!--
+<DIV class="app"></DIV>
+<script src="js\script.js" type="module"></script>
+ 
+ <button onclick="llamarAPI()">Llamar a la API</button>
+        <div id="resultado"></div>
+        -->
+
+    <script src="{% static 'app/js/script.js' %}"></script>
+    <title>Fotos de la API</title>
+    <style>
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .photo-card {
+            width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .photo-title {
+            font-weight: bold;
+        }
+
+        .photo-image {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <div id="photo-container" class="photo-container"></div>
+    </body>
+
+</section>
+
+{% endblock %}

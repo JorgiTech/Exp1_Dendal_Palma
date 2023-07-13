@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<div class="container">
+    <h1>Productos</h1>
+    <table id="customers" border="1">
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th colspan="2" id="mid">Action</th>
+        </thead>
+        {% for producto in pro %}
+        <tr>
+            <td class="td">{{ producto.id }}</td>
+            <td class="td">{{ producto.nombre }}</td>
+            <td class="td">{{ producto.valor }}</td>
+            <td class="td">
+                <a href="{% url 'actualizar' id=producto.id %}"><button id="update">Actualizar Producto</button></a>
+            </td>
+            <td>
+                <a href="eliminar/{{ producto.id }}"><button id="del">Eliminar</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a href="{% url 'agregar' %}"><button id="add">Agregar Producto</button></a>
+</div>
+
+{% endblock %}

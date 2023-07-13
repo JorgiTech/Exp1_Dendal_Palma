@@ -1,0 +1,84 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<section>
+    <div id="carrusel" class="carousel slide w-100">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carrusel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL1.jpg' %}" class="d-block " alt="...">
+            </div>
+            <div class="carousel-item">
+                <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL2.jpg' %}" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL3.jpg' %}" class="d-block " alt="...">
+            </div>
+            <div class="carousel-item">
+                <img class="imagen-carrusel" src="{% static 'app/IMG-1/CARROUSEL4.jpg' %}" class="d-block" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="bienvenida">
+        <p class="parrafo-bievenida">
+            <img class="home-img" src="{% static 'app/IMG-1/HOME1.jpg' %}">
+            Bienvenidos a AUTOTECH, el taller mecánico especializado en brindar un servicio de calidad a todos
+            nuestros clientes. Nuestro objetivo es proporcionar soluciones eficientes y económicas para cualquier
+            problema que tenga su vehículo. Contamos con un equipo altamente capacitado de técnicos y mecánicos que
+            trabajan con las últimas tecnologías y herramientas de diagnóstico para garantizar la mejor atención
+            posible. Además, nos enorgullece decir que utilizamos solo las piezas y repuestos más confiables y de
+            alta calidad, lo que nos permite brindar una garantía de servicio en todas nuestras reparaciones. En
+            AUTOTECH nos dedicamos a brindar una experiencia personalizada y transparente, trabajando en
+            colaboración con nuestros clientes para explicarles los problemas de su vehículo y las soluciones
+            propuestas de manera clara y sencilla. Siempre nos esforzamos por hacer de su experiencia con nosotros
+            lo más fácil y cómoda posible. Visite nuestro taller y experimente el servicio excepcional que
+            ofrecemos.
+
+        </p>
+
+        <P class="parrafo-bievenida">
+            <img class="home-img" src="{% static 'app/IMG-1/HOME2.jpg' %}">
+            En AUTOTECH, nos enfocamos en brindar una atención al cliente excepcional. Desde el momento en que
+            ingresa a nuestro taller, será recibido por uno de nuestros profesionales, quienes lo guiarán en todo
+            momento y responderán a cualquier pregunta o duda que tenga. Realizaremos una evaluación completa de su
+            vehículo, utilizando nuestras herramientas y tecnologías de diagnóstico avanzadas para identificar
+            cualquier problema potencial y ofrecerle las mejores soluciones disponibles.
+
+            Una vez que hayamos identificado los problemas, trabajaremos con usted para brindarle una explicación
+            detallada de las reparaciones necesarias y los costos asociados. Nuestro equipo está capacitado para
+            brindarle opciones y recomendaciones para que pueda tomar una decisión informada sobre cómo desea
+            proceder. Siempre le brindaremos un presupuesto transparente y detallado, sin cargos ocultos ni
+            sorpresas de última hora.
+
+            Además, sabemos que su tiempo es valioso, por lo que nos esforzamos por ofrecer un servicio rápido y
+            eficiente. Si es posible, realizamos las reparaciones el mismo día para que pueda volver a la carretera
+            lo antes posible. También ofrecemos servicios de mantenimiento preventivo para ayudar a prevenir
+            problemas antes de que ocurran, lo que puede ahorrarle tiempo y dinero a largo plazo.
+
+            En AUTOTECH, nuestro compromiso es brindarle una atención al cliente excepcional y hacer que su
+            experiencia con nosotros sea lo más fácil y cómoda posible. Visítenos hoy mismo y descubra por qué somos
+            el taller mecánico de confianza de tantos clientes satisfechos.
+
+        </P>
+    </div>
+
+</section>
+
+{% endblock %}
