@@ -1,5 +1,7 @@
 
 from django.shortcuts import redirect,render,get_object_or_404, HttpResponse
+
+from autotech.app import Carrito
 from .models import Producto
 
 
@@ -61,10 +63,31 @@ def actualizarsave(request, id):
         return redirect("/productos/")
     else:
         return redirect("/productos/")
-    
 
 
 def carrito(request):
-    #return HttpResponse("Hola mundo")
-    #productos = Producto.objects.all()
-    return render(request, "app/tienda.html", {'productos':productos})
+    productos = Producto.objects.all()
+    return render(request, "app/carrito.html", {'productos':productos})
+
+def add(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.agregar(producto)
+    return redirect("/carrito/")
+
+def delete(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.delete(producto)
+    return redirect("/carrito/")
+
+def minus(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.restar(producto)
+    return redirect("/carrito/")
+
+def clean(request):
+    carrito = Carrito(request)
+    carrito.limpiar()
+    return redirect("/carrito/")
