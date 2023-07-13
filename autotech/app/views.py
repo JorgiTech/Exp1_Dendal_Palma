@@ -1,7 +1,7 @@
 
 from django.shortcuts import redirect,render,get_object_or_404, HttpResponse
 
-from autotech.app import Carrito
+# from . import Carrito
 from .models import Producto
 
 
@@ -27,6 +27,7 @@ def productos(request):
 
 def agregar(request):
     return render(request,'app/agregar.html')
+
 
 
 
