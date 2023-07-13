@@ -357,6 +357,7 @@ input[type="text"], input[type="number"] {
   background-color: #242424;
   height: auto;
   width: 35rem;
+  
 }
 
 .card-text2 {
@@ -364,3 +365,12 @@ input[type="text"], input[type="number"] {
   text-align: justify;
 }
 
+.row {
+  
+  margin-left: auto;
+  
+}
+
+.row>* {
+  padding-bottom: 20px;
+}

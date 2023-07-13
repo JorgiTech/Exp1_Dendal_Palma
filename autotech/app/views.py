@@ -2,7 +2,7 @@
 from django.shortcuts import redirect,render,get_object_or_404, HttpResponse
 
 from .Carrito import Carrito
-
+from .context_processor import total_carrito
 
 
 # from . import Carrito
@@ -72,7 +72,10 @@ def actualizarsave(request, id):
 
 def carrito(request):
     productos = Producto.objects.all()
-    return render(request, "app/carrito.html", {'productos':productos})
+    return render(request, "app/carrito.html", {'productos': productos, **total_carrito(request)})
+
+
+
 
 def add(request, producto_id):
     carrito = Carrito(request)
