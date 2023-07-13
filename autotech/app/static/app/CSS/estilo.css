@@ -374,3 +374,10 @@ input[type="text"], input[type="number"] {
 .row>* {
   padding-bottom: 20px;
 }
+
+
+.carrito-bot{
+  margin: 0 auto; /* Establece los márgenes laterales automáticos para centrar horizontalmente */
+    text-align: center; /* Centra el contenido de forma horizontal dentro del div */
+  width: 40%;
+}
