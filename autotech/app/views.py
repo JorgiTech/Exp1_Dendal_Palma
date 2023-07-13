@@ -77,7 +77,7 @@ def delete(request, producto_id):
     carrito = request.session.get('carrito', {})
     if producto_id in carrito:
         del carrito[producto_id]
-        request.session['/carrito/'] = carrito
+        request.session['carrito'] = carrito
     return redirect('carrito')
 
 def carrito(request):
