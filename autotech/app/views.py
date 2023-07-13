@@ -1,6 +1,10 @@
 
 from django.shortcuts import redirect,render,get_object_or_404, HttpResponse
 
+from .Carrito import Carrito
+
+
+
 # from . import Carrito
 from .models import Producto
 
@@ -73,7 +77,7 @@ def carrito(request):
 def add(request, producto_id):
     carrito = Carrito(request)
     producto = Producto.objects.get(id=producto_id)
-    carrito.agregar(producto)
+    carrito.add(producto)
     return redirect("/carrito/")
 
 def delete(request, producto_id):
@@ -85,10 +89,10 @@ def delete(request, producto_id):
 def minus(request, producto_id):
     carrito = Carrito(request)
     producto = Producto.objects.get(id=producto_id)
-    carrito.restar(producto)
+    carrito.minus(producto)
     return redirect("/carrito/")
 
 def clean(request):
     carrito = Carrito(request)
-    carrito.limpiar()
+    carrito.clean()
     return redirect("/carrito/")

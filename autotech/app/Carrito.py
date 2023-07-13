@@ -15,12 +15,12 @@ class Carrito:
             self.carrito[id]={
                 "producto_id": producto.id,
                 "nombre": producto.nombre,
-                "acumulado": producto.precio,
+                "acumulado": producto.valor,
                 "cantidad": 1,
             }
         else:
             self.carrito[id]["cantidad"] += 1
-            self.carrito[id]["acumulado"] += producto.precio
+            self.carrito[id]["acumulado"] += producto.valor
         self.save_carrito()
 
     def save_carrito(self):
@@ -37,7 +37,7 @@ class Carrito:
         id = str(producto.id)
         if id in self.carrito.keys():
             self.carrito[id]["cantidad"] -= 1
-            self.carrito[id]["acumulado"] -= producto.precio
+            self.carrito[id]["acumulado"] -= producto.valor
             if self.carrito[id]["cantidad"] <= 0: self.delete(producto)
             self.save_carrito()
 

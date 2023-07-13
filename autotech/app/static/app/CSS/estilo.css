@@ -352,3 +352,15 @@ input[type="text"], input[type="number"] {
 .titulo-extra {
   font-weight: bold;
 }
+
+.card-body2 {
+  background-color: #242424;
+  height: auto;
+  width: 35rem;
+}
+
+.card-text2 {
+  height: auto;
+  text-align: justify;
+}
+
