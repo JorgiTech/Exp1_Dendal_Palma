@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block contenido %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
 <div class="container">
     <h1>Productos</h1>
     <table id="customers" border="1">
@@ -14,10 +13,10 @@
         </thead>
         {% for producto in pro %}
         <tr>
-            <td>{{ producto.id }}</td>
-            <td>{{ producto.nombre }}</td>
-            <td>{{ producto.valor }}</td>
-            <td>
+            <td class="td">{{ producto.id }}</td>
+            <td class="td">{{ producto.nombre }}</td>
+            <td class="td">{{ producto.valor }}</td>
+            <td class="td">
                 <a href="{% url 'actualizar' id=producto.id %}"><button id="update">Actualizar Producto</button></a>
             </td>
             <td>

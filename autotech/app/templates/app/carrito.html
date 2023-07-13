@@ -9,13 +9,20 @@
     <!-- ... -->
     <a href="{% url 'delete' item_carrito.producto.id %}">Eliminar</a>
     <!-- ... -->
+
+    <form method="post" action="{% url 'agregar_al_carrito' producto_id=item_carrito.producto.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Agregar al carrito">
+    </form>
 {% endfor %}
-<!-- ... -->
-<form method="post" action="{% url 'add' producto_id=item_carrito.producto.id %}">
-    {% csrf_token %}
-    <input type="submit" value="Agregar al carrito">
-</form>
+
+<!-- Agregar el siguiente bloque para mostrar los productos en el carrito -->
+<h2>Productos en el carrito:</h2>
+{% for item_carrito in items_carrito %}
+    <p>{{ item_carrito.producto.nombre }} - Cantidad: {{ item_carrito.cantidad }}</p>
+{% empty %}
+    <p>No hay productos en el carrito.</p>
+{% endfor %}
 
 
 {% endblock %}
-

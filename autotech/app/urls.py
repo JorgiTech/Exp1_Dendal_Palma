@@ -14,7 +14,7 @@ urlpatterns = [
     path('productos/eliminar/<int:id>/', views.eliminar, name='eliminar'),
     path('actualizar/<int:id>/', views.actualizar, name='actualizar'),
     path('actualizarsave/<int:id>/', views.actualizarsave, name='actualizarsave'),
-    path('carrito/', views.carrito, name='carrito'),  # Asocia la URL 'carrito/' con la vista 'carrito' de la aplicación main
+    path('carrito/', views.carrito, name='carrito'), 
     path('carrito/add/<int:producto_id>/', views.add, name='agregar_al_carrito'),
     path('carrito/delete/<int:item_id>/', views.delete, name='eliminar_del_carrito'),
 ]

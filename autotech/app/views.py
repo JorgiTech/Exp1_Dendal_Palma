@@ -79,11 +79,10 @@ def add(request, producto_id):
     carrito[producto_id] = carrito.get(producto_id, 0) + 1
     request.session['carrito'] = carrito
     return redirect('carrito')
-# ...
 
 
 def carrito(request):
-    carrito = request.session.get('/carrito/', {})
+    carrito = request.session.get('carrito', {})
     items_carrito = []
     for producto_id, cantidad in carrito.items():
         producto = Producto.objects.get(id=producto_id)
