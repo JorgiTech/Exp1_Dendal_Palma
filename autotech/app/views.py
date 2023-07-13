@@ -1,6 +1,6 @@
 
-from django.shortcuts import redirect,render,get_object_or_404
-from .models import Producto, ItemCarrito
+from django.shortcuts import redirect,render,get_object_or_404, HttpResponse
+from .models import Producto
 
 
 # Create your views here.
@@ -26,7 +26,7 @@ def productos(request):
 def agregar(request):
     return render(request,'app/agregar.html')
 
-from django.shortcuts import redirect
+
 
 def agregarsave(request):
     if 'nombre' in request.POST:
@@ -50,10 +50,6 @@ def actualizar(request, id):
     pro = Producto.objects.get(id=id)
     return render(request, 'app/actualizar.html', {'pro': pro})
 
-
-#def actualizar(request,id):
-    pro=Producto.objects.get(id=id)
-    return render(request,'app/actualizar.html',{'pro':pro})
     
     
 def actualizarsave(request, id):
@@ -66,25 +62,9 @@ def actualizarsave(request, id):
     else:
         return redirect("/productos/")
     
-def delete(request, producto_id):
-    carrito = request.session.get('carrito', {})
-    if producto_id in carrito:
-        del carrito[producto_id]
-        request.session['carrito'] = carrito
-    return redirect('carrito')
-
-def add(request, producto_id):
-    producto = Producto.objects.get(id=producto_id)
-    carrito = request.session.get('carrito', {})
-    carrito[producto_id] = carrito.get(producto_id, 0) + 1
-    request.session['carrito'] = carrito
-    return redirect('carrito')
 
 
 def carrito(request):
-    carrito = request.session.get('carrito', {})
-    items_carrito = []
-    for producto_id, cantidad in carrito.items():
-        producto = Producto.objects.get(id=producto_id)
-        items_carrito.append({'producto': producto, 'cantidad': cantidad})
-    return render(request, 'app/carrito.html', {'items_carrito': items_carrito})
+    #return HttpResponse("Hola mundo")
+    #productos = Producto.objects.all()
+    return render(request, "app/tienda.html", {'productos':productos})

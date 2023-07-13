@@ -3,12 +3,13 @@
 
 {% block contenido %}
 
-<h1>Carrito de Compras</h1>
+<!--
+    <h1>Carrito de Compras</h1>
 
 {% for item_carrito in items_carrito %}
-    <!-- ... -->
+  
     <a href="{% url 'delete' item_carrito.producto.id %}">Eliminar</a>
-    <!-- ... -->
+   
 
     <form method="post" action="{% url 'agregar_al_carrito' producto_id=item_carrito.producto.id %}">
         {% csrf_token %}
@@ -16,13 +17,45 @@
     </form>
 {% endfor %}
 
-<!-- Agregar el siguiente bloque para mostrar los productos en el carrito -->
+
 <h2>Productos en el carrito:</h2>
 {% for item_carrito in items_carrito %}
     <p>{{ item_carrito.producto.nombre }} - Cantidad: {{ item_carrito.cantidad }}</p>
 {% empty %}
     <p>No hay productos en el carrito.</p>
 {% endfor %}
+
+
+<div class="container">
+    <h1>Productos</h1>
+    <table id="customers" border="1">
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Valor</th>
+            <th colspan="2" id="mid">Action</th>
+        </thead>
+        {% for producto in pro %}
+        <tr>
+            <td class="td">{{ producto.id }}</td>
+            <td class="td">{{ producto.nombre }}</td>
+            <td class="td">{{ producto.valor }}</td>
+            <td class="td">
+                <a href="{% url 'actualizar' id=producto.id %}"><button id="update">Actualizar Producto</button></a>
+            </td>
+            <td>
+                <a href="eliminar/{{ producto.id }}"><button id="del">Eliminar</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a href="{% url 'agregar' %}"><button id="add">Agregar Producto</button></a>
+</div>
+
+-->
+
+
 
 
 {% endblock %}
